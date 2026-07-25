@@ -19,7 +19,7 @@ for (const file of tsxFiles) {
   allTSX += fs.readFileSync(path.join(componentsDir, file), "utf-8") + "\n";
 }
 
-// Also read CSS file(s) — class names might only appear in CSS
+// Also read CSS file(s), class names might only appear in CSS
 const cssGlob = [
   "app/globals.css",
   "app/cn-*.css",

@@ -1,4 +1,4 @@
-# Example Output — scoutco.ai Clone
+# Example Output: scoutco.ai Clone
 
 This is a real completed clone project. Use it as a reference for what "done" looks like.
 
@@ -7,7 +7,7 @@ This is a real completed clone project. Use it as a reference for what "done" lo
 ```
 scoutco-clone/
   app/
-    globals.css           # 1073 lines — ALL styles, organized by section
+    globals.css           # 1073 lines, ALL styles, organized by section
     layout.tsx            # Root layout: GsapProvider + LenisProvider
     page.tsx              # Imports + renders all sections in order
   components/
@@ -139,9 +139,9 @@ export default function Home() {
 ## Key Patterns Demonstrated
 
 1. **CSS-first**: 1073 lines of globals.css using original selectors, not Tailwind utilities
-2. **Exact class names**: `.page-header.layout-hero`, `.accordion-wrapper`, `.communication` — copied from original HTML
+2. **Exact class names**: `.page-header.layout-hero`, `.accordion-wrapper`, `.communication`: copied from original HTML
 3. **GSAP cleanup**: Every section uses `gsap.context()` in `useEffect` with `return () => ctx.revert()`
 4. **PixelReveal per-media**: Each VideoPlayer has its own PixelReveal instance, triggered on `onCanPlay`
 5. **pre-anim pattern**: Elements start `visibility: hidden`, revealed by GSAP or IntersectionObserver
-6. **Original breakpoints**: `@media (max-width: 939px)` — not Tailwind `md`
+6. **Original breakpoints**: `@media (max-width: 939px)`: not Tailwind `md`
 7. **Verbatim content**: All text copied exactly, including special characters and typography

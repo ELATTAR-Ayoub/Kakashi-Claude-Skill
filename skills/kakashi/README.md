@@ -9,7 +9,7 @@
 
 <p align="center">
   Claude skills that turn any reference website into a production-ready Next.js codebase<br/>
-  and add professional animations — without needing frontend or design experience.<br/><br/>
+  and add professional animations, without needing frontend or design experience.<br/><br/>
   <i>...座って。全部やるから。</i> <code>(◕‿◕)</code>
 </p>
 
@@ -25,27 +25,27 @@ This is how we build landing pages at Lens. It's fast, it produces professional 
  │   1. FIND    ✧ 探す     Find a great reference website               │
  │       │                 (same industry = better results)             │
  │       ▼                                                              │
- │   2. CLONE   ✧ 写す     "Clone this site" → Kakashi builds it     │
+ │   2. CLONE   ✧ 写す     "Clone this site" → Kakashi builds it        │
  │       │                 You get: Next.js + Tailwind + all components │
  │       ▼                                                              │
  │   3. REWRITE ✧ 書く     Replace the copy with YOUR content           │
  │       │                 Product name, features, messaging            │
  │       ▼                                                              │
  │   4. ASSETS  ✧ 素材     Swap images/videos with your own             │
- │       │                 (or generate with AI — Midjourney, Runway)   │
+ │       │                 (or generate with AI: Midjourney, Runway)    │
  │       ▼                                                              │
  │   5. ANIMATE ✧ 動かす   "Add scroll animations" → Animation Forge    │
  │       │                 Pick from a menu, it builds + wires in       │
  │       ▼                                                              │
  │   6. SHIP    ✧ 届ける   Production-ready landing page                │
- │                         ...もう関わることないけど、頑張ってね。(￣ω￣)  │
+ │                        ...もう関わることないけど、頑張ってね。(￣ω￣)│
  │                                                                      │
  └──────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Why this works
 
-- **You skip design.** A good reference website was designed by a professional. You inherit their layout, spacing, typography, and color decisions — all the hard stuff.
+- **You skip design.** A good reference website was designed by a professional. You inherit their layout, spacing, typography, and color decisions, all the hard stuff.
 - **You skip frontend.** Kakashi extracts everything into clean React components. Animation Forge adds motion without writing GSAP or Three.js code.
 - **You keep quality.** The reference gives you a proven foundation. Your changes (copy, assets, small tweaks) stay within the design language.
 
@@ -57,7 +57,7 @@ This is how we build landing pages at Lens. It's fast, it produces professional 
 
 > **If you don't have strong design taste, stay close to your reference.**
 >
-> The reference website was built by a good designer. Every section, every spacing choice, every color was intentional. When you add new sections, build them from patterns that already exist in the cloned codebase — same fonts, same spacing, same component structure.
+> The reference website was built by a good designer. Every section, every spacing choice, every color was intentional. When you add new sections, build them from patterns that already exist in the cloned codebase, same fonts, same spacing, same component structure.
 >
 > Going too far from the reference is where things break. A section that "doesn't feel right" usually means you invented something instead of reusing what was already there.
 
@@ -82,11 +82,11 @@ cd kakashi
 
 # Install all three skills
 cp -r skills/kakashi          ~/.claude/skills/kakashi
-cp -r skills/lens-copy-web-1  ~/.claude/skills/lens-copy-web-1
+cp -r skills/kakashi-fast    ~/.claude/skills/kakashi-fast
 cp -r skills/animation-forge  ~/.claude/skills/animation-forge
 ```
 
-That's it. All skills trigger automatically — no slash commands needed.
+That's it. All skills trigger automatically, no slash commands needed.
 
 *...インストール完了。* `(•̀ᴗ•́)و`
 
@@ -98,10 +98,10 @@ That's it. All skills trigger automatically — no slash commands needed.
 
 Browse sites in the same industry as what you're building. Good sources:
 
-- [Awwwards](https://www.awwwards.com/) — award-winning designs
-- [Godly](https://godly.website/) — curated landing pages
-- [Lapa Ninja](https://www.lapa.ninja/) — landing page inspiration
-- [SaaS Landing Page](https://saaslandingpage.com/) — SaaS-specific
+- [Awwwards](https://www.awwwards.com/), award-winning designs
+- [Godly](https://godly.website/), curated landing pages
+- [Lapa Ninja](https://www.lapa.ninja/), landing page inspiration
+- [SaaS Landing Page](https://saaslandingpage.com/), SaaS-specific
 
 **Tips for choosing a reference:**
 - Pick something in the same industry (SaaS → SaaS, fintech → fintech)
@@ -151,12 +151,12 @@ Now you have a working clone. Open it and replace the content:
 Change all the text on the landing page to reflect our product.
 Here's our web copy:
 
-Hero: "Lens OS — The Operating System for Construction"
+Hero: "Lens OS: The Operating System for Construction"
 Subtitle: "AI-powered plan review that catches what humans miss"
 ...
 ```
 
-**The structure stays the same** — same sections, same layout, same components. Only the words change.
+**The structure stays the same**: same sections, same layout, same components. Only the words change.
 
 ### Step 4: Swap Assets ✧ 素材
 
@@ -189,24 +189,24 @@ Animation Forge will:
 ```
 I found 4 places where animations would improve this page:
 
-1. HERO ENTRANCE — The hero loads all at once. Options:
-   (a) Cascade — headline, then subtitle, then CTA slide up in sequence
-   (b) Fade + blur — everything fades in with a soft blur dissolve
-   (c) Scramble text — headline characters scramble before revealing
+1. HERO ENTRANCE: The hero loads all at once. Options:
+   (a) Cascade, headline, then subtitle, then CTA slide up in sequence
+   (b) Fade + blur, everything fades in with a soft blur dissolve
+   (c) Scramble text, headline characters scramble before revealing
 
-2. FEATURE CARDS — Cards appear statically. Options:
-   (a) Stagger — cards slide up one-by-one as you scroll
-   (b) Scale pop — cards scale up with a gentle bounce
-   (c) 3D tilt — cards tilt toward your cursor on hover
+2. FEATURE CARDS: Cards appear statically. Options:
+   (a) Stagger, cards slide up one-by-one as you scroll
+   (b) Scale pop, cards scale up with a gentle bounce
+   (c) 3D tilt, cards tilt toward your cursor on hover
 
-3. STATS SECTION — Numbers are just text. Options:
-   (a) Count up — numbers animate from 0 to their value
-   (b) Count up + progress bars — numbers count with visual bars
+3. STATS SECTION: Numbers are just text. Options:
+   (a) Count up, numbers animate from 0 to their value
+   (b) Count up + progress bars, numbers count with visual bars
 
-4. BACKGROUND — Page feels flat. Options:
-   (a) Floating geometry — subtle 3D shapes in the background
-   (b) Particle field — floating dots that drift slowly
-   (c) Gradient blob — organic shape that slowly morphs
+4. BACKGROUND: Page feels flat. Options:
+   (a) Floating geometry, subtle 3D shapes in the background
+   (b) Particle field, floating dots that drift slowly
+   (c) Gradient blob, organic shape that slowly morphs
 
 ...お好みは？ (◕‿◕)
 
@@ -244,7 +244,7 @@ Here are real prompts you can copy and use:
 
 ### Cloning
 ```
-Clone https://linear.app — pixel-perfect, every animation.
+Clone https://linear.app, pixel-perfect, every animation.
 ```
 ```
 I saved the HTML at reference/clone.html. Rebuild as Next.js components.
@@ -254,7 +254,7 @@ They use GSAP for animations and custom fonts. Pixel-perfect.
 ### Replacing Content
 ```
 Replace all the text with our Lens Platform copy.
-Keep the same layout and design — just change the words.
+Keep the same layout and design, just change the words.
 Here's our copy: [paste your content]
 ```
 
@@ -268,7 +268,7 @@ I want a 3D globe in the hero section background.
 Use our brand colors: #0F172A and #3B82F6.
 ```
 ```
-Make the pricing cards have a hover effect —
+Make the pricing cards have a hover effect
 something subtle and premium.
 ```
 ```
@@ -279,7 +279,7 @@ like the one on scoutco.ai.
 ### Staying Close to the Reference
 ```
 I need a new testimonials section. Build it using the same
-design patterns as the existing sections — same fonts, spacing,
+design patterns as the existing sections, same fonts, spacing,
 and component structure. Don't invent a new style.
 ```
 
@@ -287,7 +287,7 @@ and component structure. Don't invent a new style.
 
 ## What's Included ✧ 中身
 
-### Kakashi — Pixel-Perfect Cloner `(•̀ᴗ•́)و`
+### Kakashi: Pixel-Perfect Cloner `(•̀ᴗ•́)و`
 
 | File | Purpose |
 |------|---------|
@@ -304,7 +304,7 @@ and component structure. Don't invent a new style.
 | `references/example-output.md` | What a finished clone looks like |
 | `evals/evals.json` | 3 test cases for skill validation |
 
-### Animation Forge — Animation Builder `(◕‿◕)`
+### Animation Forge: Animation Builder `(◕‿◕)`
 
 | File | Purpose |
 |------|---------|

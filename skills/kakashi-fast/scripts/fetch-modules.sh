@@ -42,4 +42,4 @@ while [ ${#queue[@]} -gt 0 ]; do
     [ -z "${seen[$abs]:-}" ] && queue+=("$abs")
   done
 done
-echo "Done. Verify every line above is 200 — a single 404 chunk kills engine init."
+echo "Done. Verify every line above is 200, a single 404 chunk kills engine init."

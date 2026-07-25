@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# fetch-page.sh — Download and prettify a webpage's HTML
+# fetch-page.sh: Download and prettify a webpage's HTML
 # Usage: bash scripts/fetch-page.sh <URL> [output-dir]
 #
 # Saves:
-#   reference/clone.html       — raw HTML
-#   reference/raw-pretty.html  — prettified for searching
+#   reference/clone.html      : raw HTML
+#   reference/raw-pretty.html : prettified for searching
 
 set -euo pipefail
 
@@ -28,7 +28,7 @@ curl -sL \
 FILE_SIZE=$(wc -c < "$RAW" | tr -d ' ')
 echo "Saved raw HTML: $RAW ($FILE_SIZE bytes)"
 
-# Prettify — try npx prettier first, fall back to python, then sed
+# Prettify: try npx prettier first, fall back to python, then sed
 if command -v npx &>/dev/null && npx --yes prettier --version &>/dev/null 2>&1; then
   npx --yes prettier --parser html --print-width 120 "$RAW" > "$PRETTY" 2>/dev/null || cp "$RAW" "$PRETTY"
 elif command -v python3 &>/dev/null; then

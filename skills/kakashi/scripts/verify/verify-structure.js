@@ -55,9 +55,9 @@ results.push({
   check: `Element count ratio: ${ratio.toFixed(2)} (source=${sourceTotalTags}, TSX=${tsxTotalTags})`,
   pass: ratio >= 0.7 && ratio <= 1.3,
   details: ratio < 0.7
-    ? `TSX has significantly fewer elements than source — likely missing content`
+    ? `TSX has significantly fewer elements than source, likely missing content`
     : ratio > 1.3
-    ? `TSX has significantly more elements than source — likely added extra wrappers`
+    ? `TSX has significantly more elements than source, likely added extra wrappers`
     : undefined,
 });
 

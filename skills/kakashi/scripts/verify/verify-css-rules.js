@@ -50,7 +50,7 @@ for (const rule of sourceRules) {
         results.push({
           check: `Property "${prop}" in "${rule.selector}"`,
           pass: false,
-          details: `Source has ${prop}: ${value} — missing in clone`,
+          details: `Source has ${prop}: ${value}, missing in clone`,
         });
       }
     } else if (clonePropMap[prop] !== value) {

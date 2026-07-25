@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# verify-build.sh — Run TypeScript + Next.js build checks
+# verify-build.sh: Run TypeScript + Next.js build checks
 # Usage: bash scripts/verify-build.sh [project-dir]
 #
 # Checks:

@@ -155,7 +155,7 @@ if (libs.intersectionObserver) {
 // If no animations detected at all
 if (detectedLibs.length === 0) {
   results.push({
-    check: `No animation libraries detected — Phase 3 may be marked N/A`,
+    check: `No animation libraries detected, Phase 3 may be marked N/A`,
     pass: true,
   });
 }

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-download-assets.py — Parse HTML and download all external assets.
+download-assets.py, Parse HTML and download all external assets.
 
 Usage: python3 scripts/download-assets.py reference/clone.html [base-url]
 
 Downloads:
-  downloaded_assets/css/    — External stylesheets
-  downloaded_assets/js/     — JS bundles (sorted by size for animation searching)
-  public/fonts/             — Font files (woff2, woff, ttf, otf)
-  public/assets/            — Images, videos, Lottie files
-  public/                   — Favicon, OG images
+  downloaded_assets/css/   , External stylesheets
+  downloaded_assets/js/    , JS bundles (sorted by size for animation searching)
+  public/fonts/            , Font files (woff2, woff, ttf, otf)
+  public/assets/           , Images, videos, Lottie files
+  public/                  , Favicon, OG images
 """
 
 import os
@@ -210,7 +210,7 @@ def main():
         if fetch(url, dest):
             manifest["js"].append({"url": url, "local": dest, "size": os.path.getsize(dest)})
 
-    # Sort JS by size (largest first — most likely to contain animations)
+    # Sort JS by size (largest first: most likely to contain animations)
     manifest["js"].sort(key=lambda x: x.get("size", 0), reverse=True)
     if manifest["js"]:
         print(f"\n  Largest JS bundle: {manifest['js'][0]['local']} ({manifest['js'][0]['size']//1000}KB)")

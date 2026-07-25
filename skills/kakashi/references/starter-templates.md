@@ -30,7 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type GsapCtx = ReturnType<typeof gsap.context> | null;
 
-// Shared easing — ADAPT these to match the target site
+// Shared easing, ADAPT these to match the target site
 export const EASE = "power2.out";
 export const EASE_CSS = "cubic-bezier(.33, 1, .68, 1)";
 

@@ -16,7 +16,7 @@ function parseRules(cssPath) {
 
   while ((match = blockRegex.exec(cleaned)) !== null) {
     if (match[1]) {
-      // @media block — parse inner rules
+      // @media block, parse inner rules
       const mediaQuery = match[1].trim();
       const innerCSS = match[2];
       const innerRegex = /([^{]+)\{([^}]*)\}/g;

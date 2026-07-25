@@ -468,7 +468,7 @@ export function StaggerList({
 
 ## 9. Smooth Reveal (Clip Path)
 
-Content reveals via an expanding clip-path — looks like a curtain opening.
+Content reveals via an expanding clip-path, looks like a curtain opening.
 
 ```tsx
 "use client";

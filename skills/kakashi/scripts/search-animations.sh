@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# search-animations.sh — Search JS bundles for animation patterns
+# search-animations.sh: Search JS bundles for animation patterns
 # Usage: bash scripts/search-animations.sh [js-directory]
 #
 # Searches for GSAP, Framer Motion, anime.js, ScrollTrigger,
@@ -20,7 +20,7 @@ echo "=============================================="
 echo "  ANIMATION SEARCH REPORT"
 echo "=============================================="
 
-# Sort by file size (largest first — most likely to contain animations)
+# Sort by file size (largest first: most likely to contain animations)
 FILES=$(ls -S "$JS_DIR"/*.js 2>/dev/null || true)
 
 if [ -z "$FILES" ]; then
@@ -56,7 +56,7 @@ for BUNDLE in $FILES; do
 
     # ScrambleText (premium plugin)
     if grep -qP 'ScrambleText|scrambleText' "$BUNDLE" 2>/dev/null; then
-      echo "  ⚠️  ScrambleText plugin detected (premium — use custom useHeadlineReveal)"
+      echo "  ⚠️  ScrambleText plugin detected (premium, use custom useHeadlineReveal)"
     fi
 
     # SplitText (premium plugin)

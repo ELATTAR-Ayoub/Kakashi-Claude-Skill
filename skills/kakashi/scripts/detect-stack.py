@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-detect-stack.py — Identify a website's tech stack from its HTML and JS bundles.
+detect-stack.py, Identify a website's tech stack from its HTML and JS bundles.
 
 Usage: python3 scripts/detect-stack.py reference/clone.html [downloaded_assets/js/]
 

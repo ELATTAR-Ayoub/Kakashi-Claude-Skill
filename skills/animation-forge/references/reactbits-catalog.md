@@ -1,8 +1,8 @@
 # ReactBits Animation Catalog
 
-Source: https://reactbits.dev — open source, copy-paste React components.
+Source: https://reactbits.dev, open source, copy-paste React components.
 
-When a ReactBits component fits the user's request, fetch the code from the URL and adapt to their theme. Components are framework-agnostic React — they work in any Next.js project.
+When a ReactBits component fits the user's request, fetch the code from the URL and adapt to their theme. Components are framework-agnostic React, they work in any Next.js project.
 
 ---
 

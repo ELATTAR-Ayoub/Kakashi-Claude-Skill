@@ -2,12 +2,12 @@
 # Usage: bash run-all-verifications.sh <project-root> [--phase N]
 #
 # Expects these paths relative to project root:
-#   reference/clone.html          — source HTML
-#   downloaded_assets/             — source CSS files
-#   components/sections/           — built TSX components
-#   app/cn-*.css or app/globals.css — built CSS
-#   public/                        — assets
-#   downloaded_assets/js/ or public/js/ — JS bundles
+#   reference/clone.html         : source HTML
+#   downloaded_assets/            : source CSS files
+#   components/sections/          : built TSX components
+#   app/cn-*.css or app/globals.css: built CSS
+#   public/                       : assets
+#   downloaded_assets/js/ or public/js/: JS bundles
 
 set -e
 
@@ -85,7 +85,7 @@ run_script() {
   for arg in "${cmd[@]}"; do
     if [[ "$arg" == *.html || "$arg" == *.css ]]; then
       if [ ! -f "$arg" ]; then
-        echo "  [SKIP] $name — required file not found: $arg"
+        echo "  [SKIP] $name, required file not found: $arg"
         SKIPPED=$((SKIPPED + 1))
         TOTAL=$((TOTAL - 1))
         return

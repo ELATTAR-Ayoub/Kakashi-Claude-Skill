@@ -1,4 +1,4 @@
-# Phases 2–4 — The DOM contract and engine adoption
+# Phases 2–4: The DOM contract and engine adoption
 
 This is the heart of the skill: make the DOM identical, then hand it to the
 original engine. Below is the concrete contract and the traps that break it.
@@ -28,7 +28,7 @@ Individual block modules query their own internals (e.g. `.hero_main`,
 `.main_heading`, `.progress_bar`, `.js-video-handler`, `.marquee_collection`).
 Read each module and make sure those selectors exist with the same names.
 
-## Initial inline styles are not decoration — they are animation "from" states
+## Initial inline styles are not decoration: they are animation "from" states
 
 The source often serves elements with `style="opacity:0"` /
 `transform:translateY(-40px)`. The intro animations animate *from* these to the
@@ -56,7 +56,7 @@ inline style verbatim.**
   `style={{ ["--block-color-background" as string]: "#f7f7f5" }}`.
 - **Globals the modules expect.** Modules may reference bare `gsap`, `ScrollTrigger`,
   `SplitText`, `lenis`. The original `app.js` sets these on `window` and registers
-  GSAP plugins at its top level — so you must load `app.js` too, not just the
+  GSAP plugins at its top level, so you must load `app.js` too, not just the
   block modules. Shared chunks are deduped by URL, so importing the same gsap chunk
   from many modules yields one singleton; plugins registered in `app.js` are then
   visible everywhere.

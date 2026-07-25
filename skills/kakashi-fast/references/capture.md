@@ -1,4 +1,4 @@
-# Phase 1 — Capture the target
+# Phase 1: Capture the target
 
 Goal: get the rendered HTML and a complete, locally-mirrored copy of every asset
 the page loads, at the **same paths** the original uses.
@@ -7,7 +7,7 @@ the page loads, at the **same paths** the original uses.
 
 Many real sites (especially WordPress behind Cloudflare/managed firewalls) return
 a `403` to a bare `curl`. They fingerprint the request. Send a full browser
-fingerprint instead — see `scripts/fetch.sh`. The essentials:
+fingerprint instead, see `scripts/fetch.sh`. The essentials:
 
 - A real `User-Agent` (current Chrome).
 - `sec-ch-ua`, `sec-ch-ua-mobile`, `sec-ch-ua-platform`.
@@ -59,7 +59,7 @@ From the HTML and JS, determine and write down:
   `wp-content/...` asset paths and `wp-*` body classes.
 - The block convention: sections tagged `data-cid="<name>"` with matching
   `dist/css/blocks/<name>/` and `dist/js/blocks/<name>/` files is the giveaway of
-  a per-block engine — ideal for adoption.
+  a per-block engine, ideal for adoption.
 - Animation/scroll libs: grep the JS for `gsap`, `ScrollTrigger`, `SplitText`,
   `MorphSVG`, `lenis`, `lottie`, `IntersectionObserver`, `UnicornStudio`.
 - How blocks bootstrap: usually an `app.js` that registers GSAP plugins, starts

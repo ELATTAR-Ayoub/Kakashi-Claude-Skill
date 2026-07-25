@@ -3,9 +3,9 @@
 ## How to Find Animations in Any Website's JS Bundles
 
 ### Search Strategy
-1. Find JS bundles — `downloaded_assets/js/*.js`
-2. Sort by size — the largest bundle usually contains animation logic
-3. Use `grep -oP` with context — extracts readable snippets from minified code
+1. Find JS bundles, `downloaded_assets/js/*.js`
+2. Sort by size, the largest bundle usually contains animation logic
+3. Use `grep -oP` with context, extracts readable snippets from minified code
 4. Use the automated script first: `bash scripts/search-animations.sh`
 
 ### Universal Grep Patterns
@@ -65,7 +65,7 @@ Text appears character-by-character with random characters cycling before settli
 
 **Key params:** charset, speed/duration, delimiter (space=word, empty=char), stagger, trigger (usually IntersectionObserver)
 
-**Implementation:** Use `useHeadlineReveal` from starter templates. GSAP ScrambleTextPlugin is premium — always build custom.
+**Implementation:** Use `useHeadlineReveal` from starter templates. GSAP ScrambleTextPlugin is premium, always build custom.
 
 ### 2. PixelReveal (Grid Dissolve)
 Content starts covered by small squares that dissolve randomly.

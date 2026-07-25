@@ -63,7 +63,7 @@ ${rules}
 
 IMPORTANT:
 - Do NOT touch files outside the FILES TO MODIFY list
-- Do NOT invent content — every value must come from source files
+- Do NOT invent content, every value must come from source files
 - Do NOT skip any acceptance criterion
 - When done, list what you changed and verify each criterion
 `;

@@ -52,7 +52,7 @@ for (const kf of sourceKF) {
     results.push({
       check: `@keyframes "${kf.name}" matches`,
       pass: stepMatch,
-      details: stepMatch ? undefined : `Step properties differ — compare source vs clone manually`,
+      details: stepMatch ? undefined : `Step properties differ, compare source vs clone manually`,
     });
   }
 }

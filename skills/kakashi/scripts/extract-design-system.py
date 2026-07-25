@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-extract-design-system.py — Extract colors, fonts, spacing, and breakpoints from CSS.
+extract-design-system.py, Extract colors, fonts, spacing, and breakpoints from CSS.
 
 Usage: python3 scripts/extract-design-system.py downloaded_assets/css/
 
@@ -122,7 +122,7 @@ def generate_theme_snippet(colors, custom_props, fonts, breakpoints):
     lines.append("/* === DRAFT THEME (adapt names to match site semantics) === */")
     lines.append("@theme inline {")
 
-    # Colors — top 20 most used
+    # Colors: top 20 most used
     lines.append("  /* Colors (by frequency) */")
     for color, count in colors.most_common(20):
         safe_name = re.sub(r'[^a-z0-9]', '-', color.lower()).strip('-')

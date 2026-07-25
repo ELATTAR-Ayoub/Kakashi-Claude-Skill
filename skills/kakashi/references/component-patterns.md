@@ -6,7 +6,7 @@
 app/
   layout.tsx            # Root layout: fonts, providers (GSAP, Lenis), metadata
   page.tsx              # Section composition (import + render in order)
-  globals.css           # ALL styles — CSS-first, organized by section
+  globals.css           # ALL styles, CSS-first, organized by section
 components/
   sections/             # One file per page section
     header.tsx
@@ -78,7 +78,7 @@ section.[name] { /* ... */ }
 ### CSS Rules
 - Use EXACT selectors from original (e.g., `section.accordion div.communication span.label`)
 - Include vendor prefixes (`-webkit-backdrop-filter`, `-moz-column-gap`)
-- ONE `@keyframes` per animation name — no duplicates
+- ONE `@keyframes` per animation name, no duplicates
 - Mobile queries use original breakpoint value
 - Comment headers: `/* === SECTION NAME === */`
 
@@ -135,9 +135,9 @@ export function SectionName() {
 ```
 
 Elements start hidden, revealed by:
-1. `useHeadlineReveal` — on IntersectionObserver trigger
-2. GSAP ScrollTrigger — on scroll position
-3. Direct observer — `el.classList.remove("pre-anim")`
+1. `useHeadlineReveal`: on IntersectionObserver trigger
+2. GSAP ScrollTrigger, on scroll position
+3. Direct observer, `el.classList.remove("pre-anim")`
 
 **Never remove this pattern.** Prevents FOUC.
 
@@ -151,7 +151,7 @@ useEffect(() => {
   if (!el) return;
 
   const ctx = gsap.context(() => {
-    // All GSAP code — auto-scoped to element
+    // All GSAP code, auto-scoped to element
     gsap.from(el.querySelector(".media-wrapper"), {
       scale: 1.1, opacity: 0,
       ease: "cubic.inOut", duration: 0.5, delay: 0.3,
@@ -167,10 +167,10 @@ useEffect(() => {
 ## Verification with Superpowers
 
 ### Parallel verification agents (`superpowers:dispatching-parallel-agents`)
-- **Agent 1:** HTML structure — classes, nesting, elements vs reference
-- **Agent 2:** CSS — selectors, properties, values, vendor prefixes vs reference
-- **Agent 3:** Animations — triggers, params, easing vs JS bundles
-- **Agent 4:** Build — `tsc --noEmit`, `next build`, no dead code
+- **Agent 1:** HTML structure, classes, nesting, elements vs reference
+- **Agent 2:** CSS: selectors, properties, values, vendor prefixes vs reference
+- **Agent 3:** Animations, triggers, params, easing vs JS bundles
+- **Agent 4:** Build, `tsc --noEmit`, `next build`, no dead code
 
 ### Systematic debugging (`superpowers:systematic-debugging`)
 Use when: animation doesn't trigger, layout breaks, CSS specificity conflicts, client-rendered content missing.
@@ -183,7 +183,7 @@ ALWAYS use before claiming done. Run build, TypeScript check, compare sections.
 ## Common Pitfalls Checklist
 
 - [ ] Class names match original exactly
-- [ ] DOM nesting matches — same depth, order, element types
+- [ ] DOM nesting matches, same depth, order, element types
 - [ ] Styles in globals.css, not inline (unless dynamic)
 - [ ] No double-nested wrappers
 - [ ] No duplicate CSS rules or @keyframes

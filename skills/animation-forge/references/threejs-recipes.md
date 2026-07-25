@@ -327,7 +327,7 @@ import { FloatingGeometry } from "@/components/3d/floating-geometry";
 - Use `IntersectionObserver` to only render 3D scenes when visible
 - Set `frameloop="demand"` on Canvas if the scene doesn't need continuous animation
 - Always add `pointer-events-none` to background 3D scenes so they don't block clicks
-- Test on mobile — disable 3D on low-power devices:
+- Test on mobile, disable 3D on low-power devices:
   ```tsx
   const [is3D, setIs3D] = useState(false);
   useEffect(() => {
