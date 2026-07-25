@@ -1,0 +1,57 @@
+{
+  "skill_name": "kakashi",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need an exact clone of scoutco.ai rebuilt as Next.js + Tailwind. I already downloaded the HTML and saved it at reference/clone.html. Make it pixel-perfect — every animation, every font, every color needs to match exactly.",
+      "expected_output": "A complete Next.js project with globals.css containing the full design system, all section components matching original HTML structure, GSAP animations matching original JS bundles, and a passing build.",
+      "assertions": [
+        "Runs npx create-next-app with --typescript --tailwind --app flags",
+        "Installs gsap, lenis, clsx, tailwind-merge",
+        "Runs scripts/download-assets.py to fetch CSS/JS/fonts/images",
+        "Runs scripts/detect-stack.py to identify tech stack",
+        "Runs scripts/extract-design-system.py to extract colors/fonts/spacing",
+        "Creates globals.css with @font-face, @theme inline, :root custom properties",
+        "Uses original CSS selectors, not Tailwind utility classes",
+        "Creates section components matching original HTML structure",
+        "Uses useHeadlineReveal for text scramble animations (not GSAP ScrambleTextPlugin)",
+        "Every useEffect with GSAP includes gsap.context() and ctx.revert() cleanup",
+        "Runs scripts/verify-build.sh for build verification",
+        "Runs 4 verification agents (structural, CSS, animation, build)"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Clone this website for me: https://linear.app — I want a 1:1 copy as a React codebase. The animations, the hover effects, everything should be identical to the original.",
+      "expected_output": "Project scaffolded with create-next-app, all assets downloaded via scripts, design system extracted, components built with exact class names from original, animations reverse-engineered from JS bundles.",
+      "assertions": [
+        "Runs scripts/fetch-page.sh to download HTML",
+        "Runs scripts/download-assets.py to fetch all assets",
+        "Runs scripts/detect-stack.py to identify Framer Motion or other animation lib",
+        "Runs scripts/search-animations.sh to find animation patterns in JS bundles",
+        "Adapts animation approach based on detected library (not always GSAP)",
+        "Creates globals.css with extracted design system tokens",
+        "Downloads font files locally instead of using CDN links",
+        "Uses original breakpoint values, not Tailwind md/lg"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "here's the html from my client's landing page (saved at reference/clone.html). rebuild it as proper next.js components. they use gsap for animations and have a bunch of custom fonts. needs to look exactly the same, pixel perfect",
+      "expected_output": "CSS-first approach in globals.css using original selectors, fonts downloaded locally, GSAP animations extracted and reimplemented, all sections built as React components, self-verification run with 4 agents.",
+      "assertions": [
+        "Does NOT ask user for more information — works autonomously",
+        "Runs scripts/extract-design-system.py on available CSS",
+        "Runs scripts/search-animations.sh to find GSAP patterns",
+        "Extracts exact easing values from JS bundles (cubic-bezier)",
+        "Copies content verbatim including typos and special characters",
+        "Preserves empty elements (layout spacers / animation targets)",
+        "Includes vendor prefixes (-webkit-, -moz-)",
+        "Adds self-learning: updates Common Pitfalls if user corrects output"
+      ],
+      "files": []
+    }
+  ]
+}
