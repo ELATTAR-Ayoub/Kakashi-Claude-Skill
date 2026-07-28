@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/hero.png" alt="A reference site is captured, taken apart into layers, and rebuilt as a Next.js codebase" width="100%" />
+  <img src="docs/images/hero-v2.png" alt="A reference site is captured, taken apart into layers, and rebuilt as a Next.js codebase" width="100%" />
 </p>
 
 <h1 align="center">Kakashi ✧ カカシ</h1>
